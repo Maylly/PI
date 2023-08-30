@@ -30,8 +30,9 @@ body{
     height: 470px;
     max-width: 400px;
     max-height: 470px;
-    background-color: #00ab82;
-    border-radius: 50px 5px;
+    /* background-color: #00ab83a9; */
+    border: 3px solid #00ab82;
+    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,10 +43,10 @@ body{
 .login_form{
     position: absolute;
     content: '';
-    background-color: #0c1022;
-    border-radius: 50px 5px;
+    background-color: #0c1022ee;
+    border-radius: 50px;
     inset: 5px;
-    padding: 50px 40px;
+    padding: 50px 40px; 
     z-index: 10;
     color: #E9F0E9;
     display: flex;
