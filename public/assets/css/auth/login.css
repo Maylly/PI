@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     height: 100%;
     display: flex;
@@ -20,17 +20,16 @@ body{
     align-items: center;
 }
 
-.class_h2 img{
+.class_h2 img {
     width: 80px;
 }
 
-.login_form_container{
+.login_form_container {
     position: relative;
     width: 400px;
     height: 470px;
     max-width: 400px;
     max-height: 470px;
-    /* background-color: #00ab83a9; */
     border: 3px solid #00ab82;
     border-radius: 50px;
     display: flex;
@@ -40,13 +39,13 @@ body{
     margin-top: 70px;
 }
 
-.login_form{
+.login_form {
     position: absolute;
     content: '';
     background-color: #0c1022ee;
     border-radius: 50px;
     inset: 5px;
-    padding: 50px 40px; 
+    padding: 50px 40px;
     z-index: 10;
     color: #E9F0E9;
     display: flex;
@@ -54,7 +53,7 @@ body{
     justify-content: space-between;
 }
 
-.input_group{
+.input_group {
     margin-top: 40px;
     position: relative;
     display: flex;
@@ -62,7 +61,7 @@ body{
     justify-content: start;
 }
 
-.input_text{
+.input_text {
     width: 95%;
     height: 30px;
     background: transparent;
@@ -74,17 +73,17 @@ body{
     color: #E9F0E9;
 }
 
-::placeholder{
+::placeholder {
     font-size: 15px;
     color: #E9F0E9;
     letter-spacing: 1px;
 }
 
-.fa{
+.fa {
     font-size: 20px;
 }
 
-#login_button{
+#login_button {
     position: relative;
     width: 300px;
     height: 40px;
@@ -92,7 +91,7 @@ body{
     margin-top: 70px;
 }
 
-#login_button button{
+#login_button button {
     position: absolute;
     width: 100%;
     height: 100%;
