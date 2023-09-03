@@ -14,44 +14,47 @@
 
 <body>
     <header>
-        <div class="logo">
-            <a href="/">
-                <img src="{{ asset('assets/img/logo.svg') }}" alt="...">
-            </a>
-        </div>
-
-        <div class="menu">
-            @auth
+        <div class="navbar">
+            <div class="logo">
+                <a href="/"><img class="logo-img" src="{{ asset('assets/img/logo.svg') }}" alt="..."></a>
                 <p>{{ Auth::user()->name }}</p>
-            @endauth
+            </div>
+            <ul class="links">
+                <li><a href="#">Coisa 1</a></li>
+                <li><a href="#">Coisa 2</a></li>
+                <li>
+                    <form method="POST" action="{{ route('logout') }}" x-data>
+                        @csrf
 
-            <form method="POST" action="{{ route('logout') }}" x-data>
-                @csrf
+                        <button type="submit">Sair</button>
+                    </form>
+                </li>
+            </ul>
 
-                <button type="submit">Logout</button>
-            </form>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="dropdown_menu">
+                <ul>
+                    <li><a href="#">Coisa 1</a></li>
+                    <li><a href="#">Coisa 2</a></li>
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}" x-data>
+                            @csrf
+
+                            <button type="submit">Sair</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
+    <script src="{{ asset('assets/js/header.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
-
-{{-- <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Painel de controle') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
-        </div>
-    </div>
-</x-app-layout> --}}
