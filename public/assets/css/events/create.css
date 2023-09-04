@@ -11,7 +11,7 @@
 
 body {
     height: 100vh;
-    background-image: url("../img/background.svg");
+    background-image: url("../../img/background.svg");
 }
 
 .logo {
@@ -50,9 +50,10 @@ header {
     height: 100px;
     display: flex;
     align-items: center;
-    position: relative;
+    position: fixed;
     padding-right: 2rem;
     background-color: #00ab82;
+    overflow: hidden;
 }
 
 .navbar {
@@ -127,4 +128,38 @@ button:hover {
     .dropdown_menu {
         display: block;
     }
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-event {
+    background: #00ffc3;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.form-control {
+    background: #fff;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 15px;
 }
