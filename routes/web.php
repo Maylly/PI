@@ -17,12 +17,37 @@ use Illuminate\Support\Facades\Route;
 
 // Inicial
 Route::get('/', [HomeController::class, 'index']);
+// Inicial
 
+// Projetos
+Route::get('/projetos/acat', function () {
+    return view('projects.acat');
+});
+Route::get('/projetos/eco', function () {
+    return view('projects.eco');
+});
+// Projetos
+
+// Eventos
 Route::get('/eventos', [EventController::class, 'index']);
+// Eventos
+
+// Doação
+Route::get('/doacao', function () {
+    return view('doacao');
+});
+// Doação
+
+// Jogos
+Route::get('/jogos', function () {
+    return view('games');
+});
+// Jogos
 
 // Dashboard
 Route::get('/dashboard/create/event', [EventController::class, 'create'])->middleware('auth');
 Route::post('/dashboard/create', [EventController::class, 'store']);
+// Dashboard
 
 // Rotas de Redirecionamento
 Route::get('/projetos', function () {
