@@ -9,18 +9,9 @@ class EventController extends Controller
 {
     public function index()
     {
-        $search = request('search');
+        $events = Notice::all();
 
-        if ($search) {
-
-            $events = Notice::where([
-                ['title', 'like', '%' . $search . '%']
-            ])->get();
-        } else {
-            $events = Notice::all();
-        }
-
-        return view('events.eventos', ['events' => $events, 'search' => $search]);
+        return view('events.eventos', ['events' => $events]);
     }
 
     public function create()
@@ -49,6 +40,6 @@ class EventController extends Controller
         $event->user_id = $user->id;
 
         $event->save();
-        return redirect('/dashboard')->with('msg', 'Evento criado com sucesso!');
+        return redirect('/dashboard');
     }
 }

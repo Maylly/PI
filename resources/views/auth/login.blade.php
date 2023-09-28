@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ asset('assets/css/auth/login.css') }}">
+
     <title>Coleta e Reciclagem - Login</title>
+    @vite(['resources/css/auth/login.css', 'resources/js/app.js'])
 </head>
 
 <body>
     <x-authentication-card>
         <x-slot name="logo">
-            <img src="{{ asset('/assets/img/logo.svg') }}" alt="...">
+            <img class="logo-img" alt="...">
         </x-slot>
 
         <x-validation-errors class="errorContainer" />
