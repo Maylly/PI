@@ -17,6 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-public/assets/img/events
+public/assets/img/
 resources/views/_old
 log/

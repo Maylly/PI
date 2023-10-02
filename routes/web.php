@@ -20,12 +20,8 @@ Route::get('/', [HomeController::class, 'index']);
 // Inicial
 
 // Projetos
-Route::get('/projetos/acat', function () {
-    return view('projects.acat');
-});
-Route::get('/projetos/eco', function () {
-    return view('projects.eco');
-});
+Route::get('/projetos/acat', [EventController::class, 'index_acat']);
+Route::get('/projetos/eco', [EventController::class, 'index_eco']);
 // Projetos
 
 // Eventos
@@ -46,7 +42,9 @@ Route::get('/jogos', function () {
 
 // Dashboard
 Route::get('/dashboard/create/event', [EventController::class, 'create'])->middleware('auth');
-Route::post('/dashboard/create', [EventController::class, 'store']);
+Route::get('/dashboard/create/eco', [EventController::class, 'create_eco'])->middleware('auth');
+Route::get('/dashboard/create/acat', [EventController::class, 'create_acat'])->middleware('auth');
+Route::post('/dashboard/create', [EventController::class, 'store'])->middleware('auth');
 // Dashboard
 
 // Rotas de Redirecionamento

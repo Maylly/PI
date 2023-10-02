@@ -1,7 +1,7 @@
-@vite(['resources/css/events/create.css'])
+@vite(['resources/css/events/create_acat.css'])
 
 <x-admin-layout>
-    @section('title', 'Adicionar Evento')
+    @section('title', 'Adicionar Coleta')
 
     @section('content')
         <section>
@@ -9,29 +9,24 @@
                 @csrf
 
                 <div class="form-group">
-                    <label for="title">Nome do evento:</label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento">
+                    <label for="title">Nome:</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Nome da coleta">
                 </div>
                 <div class="form-group">
                     <label for="description">Descrição:</label>
                     <input name="description" id="description" class="form-control"
-                        placeholder="O que vai acontecer no evento?"></input>
+                        placeholder="Descrição da coleta"></input>
                 </div>
                 <div class="form-group">
-                    <label for="date">Data do evento:</label>
-                    <input type="date" class="form-control" id="date" name="date">
-                </div>
-                <div class="form-group">
-                    <label for="image">Imagem do Evento:</label>
+                    <label for="image">Imagem:</label>
                     <input type="file" id="image" name="image" class="from-control-file">
                 </div>
 
                 {{-- AQUELA GAMBIARRA DO CARALHO... --}}
-                <input type="text" name="type" id="type" value="event" style="display: none">
-
+                <input type="text" name="type" id="type" value="acat" style="display: none">
 
                 <center>
-                    <input type="submit" value="Adicionar Evento">
+                    <input type="submit" value="Adicionar Coleta">
                 </center>
             </form>
         </section>

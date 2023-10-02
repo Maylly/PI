@@ -20,8 +20,9 @@
                 <p class="user-name" >{{ Auth::user()->name }}</p>
             </div>
             <ul class="links">
-                <li><a href="/dashboard/create/event">Criar evento</a></li>
-                <li><a href="#">Coisa 2</a></li>
+                <li><a href="/dashboard/create/event">Adicionar evento</a></li>
+                <li><a href="/dashboard/create/eco">Adicionar produção ECO</a></li>
+                <li><a href="/dashboard/create/acat">Adicionar coleta</a></li>
                 <li>
                     <form method="POST" action="{{ route('logout') }}" x-data>
                         @csrf
@@ -37,7 +38,8 @@
             <div class="dropdown_menu">
                 <ul>
                     <li><a href="/dashboard/create/event">Criar evento</a></li>
-                    <li><a href="#">Coisa 2</a></li>
+                    <li><a href="/dashboard/create/eco">Adicionar produção ECO</a></li>
+                    <li><a href="/dashboard/create/acat">Adicionar coleta</a></li>
                     <li>
                         <form method="POST" action="{{ route('logout') }}" x-data>
                             @csrf

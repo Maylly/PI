@@ -1,16 +1,19 @@
+@vite(['resources/css/events/eventos.css'])
+
 <x-main-layout>
     @section('title', 'Eventos')
 
     @section('content')
         <section>
-            <div id="cards-container" class="row">
+            <div class="cards-list">
                 @foreach ($events as $event)
-                    <div class="card col-md-3">
-                        <img src="{{ asset("assets/img/events/$event->image") }}" alt="{{ $event->title }}">
-                        <div class="card-body">
-                            <p class="card-date">{{ date('d/m/Y', strtotime($event->date)) }}</p>
-                            <h5 class="card-title">{{ $event->title }}</h5>
-                        </div>
+                    <div class="card">
+                        <h1 class="card-title">{{ $event->title }}</h1>
+                        <img src="{{ asset("assets/img/$event->image") }}" alt="{{ $event->title }}">
+
+                        <p>{{ $event->description }}</p>
+
+                        <p class="card-date">{{ date('d/m/Y', strtotime($event->date)) }}</p>
                     </div>
                 @endforeach
             </div>
