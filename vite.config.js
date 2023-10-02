@@ -6,7 +6,12 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/auth/login.css',
+                'resources/css/events/create_acat.css',
+                'resources/css/events/create_eco.css',
                 'resources/css/events/create.css',
+                'resources/css/events/eventos.css',
+                'resources/css/projects/acat.css',
+                'resources/css/projects/eco.css',
                 'resources/css/admin.css',
                 'resources/css/main.css',
 
