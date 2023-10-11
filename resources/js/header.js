@@ -1,4 +1,4 @@
-console.log("[!] Loading script header.js");
+console.log("[!] Loading script header.js...");
 
 const toggleBtn = document.querySelector('.toggle_btn');
 const toggleBtnIcon = document.querySelector('.toggle_btn i');
