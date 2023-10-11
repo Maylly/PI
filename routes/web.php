@@ -51,9 +51,9 @@ Route::post('/dashboard/create', [EventController::class, 'store'])->middleware(
 Route::get('/projetos', function () {
     return redirect('/');
 });
-Route::get('/user/profile', function () {
-    return redirect('/');
-});
+// Route::get('/user/profile', function () {
+//     return redirect('/');
+// });
 // Rotas de Redirecionamento
 
 // Rotas de login eu espero...
